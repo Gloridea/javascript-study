@@ -4,6 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Lesson 5. 변수와 반복문, 배열</title>
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+	script.answer {
+		display: block;
+		white-space: pre-wrap;
+		padding: 0 20px 0 20px;
+	}
+
+
+	</style>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
@@ -28,12 +37,54 @@
  *        *
 *          *
 	</pre>
+	<div class="panel panel-info">
+		<div class="panel-heading">답안 예시</div>
+		<script type="text/javascript" class="answer panel-body">
+for (var i = 0; i < 6; i++) {
+	var str = "";
+
+	for (var j = 6 - i; j >= 0; j--) {
+		str += " ";
+	}
+
+	str += "*";
+
+	for (var j = 0; j < i * 2; j++) {
+		str += " ";
+	}
+
+	str += "*";
+
+	console.log(str);
+}
+		</script>
+	</div>
 
 	<h2>2. 합과 평균 구하기</h2>
 	<p>
 		배열에 1~100 사이의 값을 랜덤하게 10개 채워 넣고, 각 배열 원소의 합과 평균을 구해서 출력합니다.<br>
 		- 찾아볼거리 : Math.random, Math.round, Math.ceil, Math.floor
 	</p>
+	<div class="panel panel-info">
+		<div class="panel-heading">답안 예시</div>
+		<script type="text/javascript" class="answer panel-body">
+var arr = [];
+for (var i = 0; i < 10; i++) {
+	var val = Math.round(Math.random() * 100);
+	arr.push(val);
+}
+
+var sum = 0;
+
+for (var i = 0; i < arr.length; i++) {
+	sum = sum + arr[i];
+}
+
+console.log("sum : ", sum);
+console.log("mean : ", sum / arr.length);
+		</script>
+	</div>
+
 </div>
 
 </body>
